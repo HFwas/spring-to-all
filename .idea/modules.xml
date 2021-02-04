@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1-spring-aop/1-spring-aop.iml" filepath="$PROJECT_DIR$/1-spring-aop/1-spring-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2-spring-ioc/2-spring-ioc.iml" filepath="$PROJECT_DIR$/2-spring-ioc/2-spring-ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3-spring-ioc-annotation/3-spring-ioc-annotation.iml" filepath="$PROJECT_DIR$/3-spring-ioc-annotation/3-spring-ioc-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-to-all.iml" filepath="$PROJECT_DIR$/spring-to-all.iml" />
+    </modules>
+  </component>
+</project>

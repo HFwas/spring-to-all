@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/1-spring-aop" />
     <file type="web" url="file://$PROJECT_DIR$/2-spring-ioc" />
     <file type="web" url="file://$PROJECT_DIR$/3-spring-ioc-annotation" />
   </component>

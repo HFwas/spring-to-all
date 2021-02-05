@@ -4,6 +4,9 @@
     <file type="web" url="file://$PROJECT_DIR$/1-spring-aop" />
     <file type="web" url="file://$PROJECT_DIR$/2-spring-ioc" />
     <file type="web" url="file://$PROJECT_DIR$/3-spring-ioc-annotation" />
+    <file type="web" url="file://$PROJECT_DIR$/4-spring-jdbc" />
+    <file type="web" url="file://$PROJECT_DIR$/5-spring-tx" />
+    <file type="web" url="file://$PROJECT_DIR$/6-spring-tx-annot" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -11,6 +14,9 @@
         <option value="$PROJECT_DIR$/1-spring-aop/pom.xml" />
         <option value="$PROJECT_DIR$/2-spring-ioc/pom.xml" />
         <option value="$PROJECT_DIR$/3-spring-ioc-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/4-spring-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/5-spring-tx/pom.xml" />
+        <option value="$PROJECT_DIR$/6-spring-tx-annot/pom.xml" />
       </list>
     </option>
   </component>

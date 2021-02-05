@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="6-spring-tx-annot:war">
+    <output-path>$PROJECT_DIR$/6-spring-tx-annot/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>6-spring-tx-annot</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="6-spring-tx-annot-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="6-spring-tx-annot:war exploded" />
+    </root>
+  </artifact>
+</component>

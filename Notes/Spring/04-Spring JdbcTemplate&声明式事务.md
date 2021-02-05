@@ -127,7 +127,7 @@ JdbcTemplate是spring框架中提供的一个对象，是对原始繁琐的Jdbc 
 
 创建数据库表和实体
 
-![](./img/1.png)
+![image-20210205162312279](images/image-20210205162312279.png)
 
 ```java
 package com.itheima.domain;
@@ -170,23 +170,23 @@ public class Account {
 
 ```java
 @Test
-    //测试JdbcTemplate开发步骤
-    public void test1() throws PropertyVetoException {
-        //创建数据源对象
-        ComboPooledDataSource dataSource = new ComboPooledDataSource();
-        dataSource.setDriverClass("com.mysql.jdbc.Driver");
-        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test");
-        dataSource.setUser("root");
-        dataSource.setPassword("root");
+//测试JdbcTemplate开发步骤
+public void test1() throws PropertyVetoException {
+    //创建数据源对象
+    ComboPooledDataSource dataSource = new ComboPooledDataSource();
+    dataSource.setDriverClass("com.mysql.jdbc.Driver");
+    dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test");
+    dataSource.setUser("root");
+    dataSource.setPassword("root");
 
-        JdbcTemplate jdbcTemplate = new JdbcTemplate();
-        //设置数据源对象  知道数据库在哪
-        jdbcTemplate.setDataSource(dataSource);
-        //执行操作
-        int row = jdbcTemplate.update("insert into account values(?,?)", "tom", 5000);
-        System.out.println(row);
+    JdbcTemplate jdbcTemplate = new JdbcTemplate();
+    //设置数据源对象  知道数据库在哪
+    jdbcTemplate.setDataSource(dataSource);
+    //执行操作
+    int row = jdbcTemplate.update("insert into account values(?,?)", "tom", 5000);
+    System.out.println(row);
 
-    }
+}
 ```
 
 
@@ -386,7 +386,7 @@ public class JdbcTemplateCRUDTest {
 
 PlatformTransactionManager 接口是 spring 的事务管理器，它里面提供了我们常用的操作事务的方法。
 
-![1554628587457](img\2.png)
+![image-20210205202242632](images/image-20210205202242632.png)
 
 注意：
 
@@ -398,7 +398,7 @@ Dao 层技术是hibernate时：org.springframework.orm.hibernate5.HibernateTrans
 
 TransactionDefinition 是事务的定义信息对象，里面有如下方法：
 
-![1554628676150](img\3.png)
+![image-20210205202518641](images/image-20210205202518641.png)
 
 #### 1. 事务隔离级别
 
@@ -438,11 +438,11 @@ TransactionDefinition 是事务的定义信息对象，里面有如下方法：
 
 TransactionStatus 接口提供的是事务具体的运行状态，方法介绍如下。
 
-![1554628857200](img\4.png)
+![image-20210205203047928](images/image-20210205203047928.png)
 
 ### 1.4 知识要点
 
-编程式事务控制三大对象
+**编程式事务控制三大对象**
 
 - PlatformTransactionManager
 

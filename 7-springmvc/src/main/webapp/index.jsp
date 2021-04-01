@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-
+    <a href="/user/quick">超链接</a>
 </body>
 </html>

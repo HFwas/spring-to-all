@@ -18,11 +18,13 @@
 
 ### 02-SpringMVC的数据响应-页面跳转-返回字符串形式（应用）
 
-![](./img/1.jpg)
+![image-20210401231821570](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210401231821570.png)
+
+![image-20210401231857409](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210401231857409.png)
 
 ### 03-SpringMVC的数据响应-页面跳转-返回ModelAndView形式1(应用)
 
-在Controller中方法返回ModelAndView对象，并且设置视图名称
+在Controller中方法返回M	odelAndView对象，并且设置视图名称
 
 ```java
 @RequestMapping(value="/quick2")

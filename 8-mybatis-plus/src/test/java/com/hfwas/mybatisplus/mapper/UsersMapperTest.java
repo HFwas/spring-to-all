@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Map;
+
 /**
  * @Author: HFwas
  * @Date: 2021/5/3
@@ -20,7 +22,7 @@ class UsersMapperTest {
     @Autowired
     private UsersMapper usersMapper;
     @Autowired
-    private UserVOMapper userVOMapper;
+    private UserVOMapper mapper;
 
     @Test
     void userMappersTest(){
@@ -83,7 +85,7 @@ class UsersMapperTest {
         //排序
         queryWrapper.orderByDesc("age");
         queryWrapper.having("id > 3");
-        userVOMapper.selectList(queryWrapper).forEach(System.out::println);
+        mapper.selectList(queryWrapper).forEach(System.out::println);
     }
 
     @Test
@@ -105,10 +107,13 @@ class UsersMapperTest {
         //userVOMapper.selectMaps(wrapper).forEach(System.out::println);
 
         // 分页查询
-        Page<UserVO> page = new Page<>(1,2);
-        Page<UserVO> voPage = userVOMapper.selectPage(page, null);
-        System.out.println(voPage.getSize());
-        System.out.println(voPage.getTotal());
-        voPage.getRecords().forEach(System.out::println);
+//        Page<UserVO> page = new Page<>(1,2);
+//        Page<UserVO> voPage = mapper.selectPage(page, null);
+//        System.out.println(voPage.getSize());
+//        System.out.println(voPage.getTotal());
+//        voPage.getRecords().forEach(System.out::println);
+
+        Page<Map<String, Object>> page1 = new Page<>(1,2);
+        mapper.selectMapsPage(page1,null).getRecords().forEach(System.out::println);
     }
 }

@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="4-spring-jdbc" />
-        <module name="2-spring-ioc" />
+        <module name="hutool" />
         <module name="3-spring-ioc-annotation" />
+        <module name="2-spring-ioc" />
+        <module name="4-spring-jdbc" />
         <module name="7-springmvc" />
         <module name="5-spring-tx" />
         <module name="6-spring-tx-annot" />
@@ -26,12 +27,14 @@
       <module name="6-spring-tx-annot" target="1.8" />
       <module name="7-springmvc" target="1.8" />
       <module name="8-mybatis-plus" target="1.8" />
+      <module name="hutool" target="1.8" />
       <module name="untitled" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="8-mybatis-plus" options="-parameters" />
+      <module name="hutool" options="-parameters" />
     </option>
   </component>
 </project>

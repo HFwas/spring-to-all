@@ -2,6 +2,7 @@ package com.hfwas.mybatisplus.config;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -26,8 +27,8 @@ public class MyBatisPlusConfig {
 
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor(){
-        //MybatisPlusInterceptor mybatisPlusInterceptor = new MybatisPlusInterceptor();
-        //mybatisPlusInterceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
+        MybatisPlusInterceptor mybatisPlusInterceptor = new MybatisPlusInterceptor();
+        mybatisPlusInterceptor.addInnerInterceptor(new PaginationInnerInterceptor());
         return new MybatisPlusInterceptor();
     }
 

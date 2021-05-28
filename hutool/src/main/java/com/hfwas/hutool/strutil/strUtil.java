@@ -20,6 +20,7 @@ public class strUtil {
         System.out.println(StrUtil.removePrefix("preHello hfwas","pre"));
         System.out.println(StrUtil.removeSuffix("preHello hfwas","hfwas"));
         System.out.println("");
+        
 
     }
 }

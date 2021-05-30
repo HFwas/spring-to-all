@@ -195,7 +195,7 @@ public class WebMvcAutoConfiguration {}
 
 #### 1、配置类只有一个有参构造器
 
-```
+```java
     //有参构造器所有参数的值都会从容器中确定
 //ResourceProperties resourceProperties；获取和spring.resources绑定的所有的值的对象
 //WebMvcProperties mvcProperties 获取和spring.mvc绑定的所有的值的对象
@@ -225,7 +225,7 @@ public class WebMvcAutoConfiguration {}
 
 #### 2、资源处理的默认规则
 
-```
+```java
 @Override
         public void addResourceHandlers(ResourceHandlerRegistry registry) {
             if (!this.resourceProperties.isAddMappings()) {
@@ -272,7 +272,7 @@ public class ResourceProperties {
 
 #### 3、欢迎页的处理规则
 
-```
+```java
     HandlerMapping：处理器映射。保存了每一个Handler能处理哪些请求。  
 
     @Bean
@@ -321,7 +321,7 @@ public class ResourceProperties {
 
 - - 扩展：如何把_method 这个名字换成我们自己喜欢的。
 
-```
+```java
     @RequestMapping(value = "/user",method = RequestMethod.GET)
     public String getUser(){
         return "GET-张三";
@@ -364,7 +364,7 @@ public class ResourceProperties {
 Rest原理（表单提交要使用REST的时候）
 
 - 表单提交会带上**_method=PUT**
-- **请求过来被**HiddenHttpMethodFilter拦截
+- **请求过来被**HiddenHttpMethodFilter拦截en
 
 - - 请求是否正常，并且是POST
 
@@ -382,7 +382,7 @@ Rest原理（表单提交要使用REST的时候）
 
 
 
-```
+```xml
 spring:
   mvc:
     hiddenmethod:

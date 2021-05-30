@@ -1,6 +1,8 @@
 package com.hfwas.springboot01.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
@@ -9,6 +11,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 //@Component
 @ConfigurationProperties(prefix = "mycar")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Car {
     private String brand;
     private Integer price;

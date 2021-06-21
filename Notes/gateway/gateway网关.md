@@ -4,8 +4,6 @@
 
 ​	
 
-
-
 ## 2.什么是 Spring Cloud Gateway
 
 ​	Spring Cloud Gateway作为 Spring Cloud生态系统中的网关，目标是代 Netflix Zur，其不仅提供统一的路由方式，并且还基于 Filter链的方式提供了网关基本的功能，目前最新版 Spring Cloud中引用的还是Zull 1.3x版本，而这个版本是基于过滤器的，是阻塞IO，不支持长连接

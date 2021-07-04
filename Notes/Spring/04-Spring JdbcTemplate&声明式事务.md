@@ -355,7 +355,7 @@ public class JdbcTemplateCRUDTest {
 }
 ```
 
-## 09-JdbcTemplate基本使用-知识要点(理解，记忆)
+## 09-JdbcTemplate基本使用-知识要点
 
 ①导入spring-jdbc和spring-tx坐标
 
@@ -364,7 +364,7 @@ public class JdbcTemplateCRUDTest {
 ③创建JdbcTemplate对象
 
     		JdbcTemplate jdbcTemplate = newJdbcTemplate();
-   		       jdbcTemplate.setDataSource(dataSource);
+    	       jdbcTemplate.setDataSource(dataSource);
 
 ④执行数据库操作
 
@@ -386,7 +386,7 @@ public class JdbcTemplateCRUDTest {
 
 PlatformTransactionManager 接口是 spring 的事务管理器，它里面提供了我们常用的操作事务的方法。
 
-![image-20210205202242632](images/image-20210205202242632.png)
+![image-20210205202242632](https://raw.githubusercontent.com/HFwas/Images/main/20210704181811.png)
 
 注意：
 

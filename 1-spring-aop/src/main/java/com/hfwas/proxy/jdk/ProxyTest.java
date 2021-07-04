@@ -1,5 +1,8 @@
 package com.hfwas.proxy.jdk;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;

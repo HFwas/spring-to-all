@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Aspect//标注当前类是一个切面类
 public class MyAspect {
 
-    //配置前置通知
+    // 配置前置通知
     //@Before(value = "execution(* com.hfwas.annot.*.*(..))")
     public void before(){
         System.out.println("前置增强");

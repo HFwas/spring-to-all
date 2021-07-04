@@ -32,7 +32,7 @@ public class JdbcTemplateTest {
         dataSource.setDriverClass("com.mysql.jdbc.Driver");
         dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test");
         dataSource.setUser("root");
-        dataSource.setPassword("1230");
+        dataSource.setPassword("");
 
         JdbcTemplate jdbc = new JdbcTemplate();
         //设置数据源对象，知道数据库在哪儿

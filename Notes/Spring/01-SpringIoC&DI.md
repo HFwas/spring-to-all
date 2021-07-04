@@ -8,7 +8,7 @@ Spring是分层的 Java SE/EE应用 full-stack 轻量级开源框架，以 IoC�
 
 ### 1.2 Spring发展历程 （了解）
 
-1997年，IBM提出了E丿B的思想
+1997年，IBM提出了EJB的思想
 
 1998年，SUN制定开发标准规范EJB1.0
 
@@ -20,7 +20,7 @@ Spring是分层的 Java SE/EE应用 full-stack 轻量级开源框架，以 IoC�
 
 2006年，EJB3.0发布
 
-![image-20210204131951723](images/image-20210204131951723.png)
+![image-20210204131951723](https://raw.githubusercontent.com/HFwas/Images/main/20210629231620.png)
 
 Rod Johnson （ Spring 之父）
 
@@ -60,7 +60,7 @@ Spring的源代码设计精妙、结构凊晰、匠心独用，处处体现着�
 
 ### 1.4 Spring的体系结构（了解）
 
-![image-20210204132734938](images/image-20210204132734938.png)
+![image-20210204132734938](https://raw.githubusercontent.com/HFwas/Images/main/20210629232505.png)
 
 
 
@@ -68,7 +68,7 @@ Spring的源代码设计精妙、结构凊晰、匠心独用，处处体现着�
 
 ### 2.1 Spring程序开发步骤
 
-![image-20210204133032443](images/image-20210204133032443.png)
+![image-20210204133032443](https://raw.githubusercontent.com/HFwas/Images/main/20210629232846.png)
 
 ①导入 Spring 开发的基本包坐标
 
@@ -143,7 +143,7 @@ xsi:schemaLocation="
 public void test1(){
 		ApplicationContext applicationContext = new  
              ClassPathXmlApplicationContext("applicationContext.xml");
-             UserDao userDao = (UserDao) applicationContext.getBean("userDao");   				 userDao.save();
+             UserDao userDao = (UserDao) applicationContext.getBean("userDao");   				 									 userDao.save();
  }
 ```
 

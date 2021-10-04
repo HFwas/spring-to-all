@@ -1,4 +1,4 @@
-package com.hfwas.test;
+package com.hfwas;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.junit.Test;

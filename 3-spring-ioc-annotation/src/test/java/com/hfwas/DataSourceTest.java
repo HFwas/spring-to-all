@@ -1,4 +1,4 @@
-package com.hfwas.test;
+package com.hfwas;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidPooledConnection;

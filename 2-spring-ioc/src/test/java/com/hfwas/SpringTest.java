@@ -1,4 +1,4 @@
-package com.hfwas.test;
+package com.hfwas;
 
 import com.hfwas.dao.UserDao;
 import org.junit.Test;

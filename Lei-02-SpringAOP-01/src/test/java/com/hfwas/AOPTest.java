@@ -22,6 +22,23 @@ public class AOPTest {
 
     }
 
+    @Test
+    public void test04(){
+        MyMathCalculator bean = APPLICATION_CONTEXT.getBean(MyMathCalculator.class);
+        bean.add(10,1);
+        System.out.println("===");
+//        bean.div(10,0);
+    }
+
+    @Test
+    public void test03(){
+        MyMathCalculator bean = APPLICATION_CONTEXT.getBean(MyMathCalculator.class);
+        System.out.println(bean);
+        bean.add(10,20);
+
+        System.out.println(bean.getClass());
+    }
+
     /*基于springaop测试*/
     @Test
     public void test02(){
@@ -42,10 +59,10 @@ public class AOPTest {
      */
     @Test
     public void test01(){
-        Calculator calculator = new MyMathCalculator();
-        calculator.add(1, 2);
+//        Calculator calculator = new MyMathCalculator();
+//        calculator.add(1, 2);
 
-        calculator.div(2, 1);
+//        calculator.div(2, 1);
 
         System.out.println("[==========]");
 

@@ -2,12 +2,14 @@ package com.hfwas.mybatisplus.mapper;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.hfwas.mybatisplus.entity.GatewayLog;
 import com.hfwas.mybatisplus.entity.User;
 import com.hfwas.mybatisplus.entity.UserVO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,6 +25,16 @@ class UsersMapperTest {
     private UsersMapper usersMapper;
     @Autowired
     private UserVOMapper mapper;
+    @Autowired
+    GatewayLogMapper gatewayLogMapper;
+
+    @Test
+    public void test(){
+        List<GatewayLog> test = gatewayLogMapper.selectListPageTotal("test", null, null, null
+                , null, null, null);
+        System.out.println(test);
+
+    }
 
     @Test
     void userMappersTest(){

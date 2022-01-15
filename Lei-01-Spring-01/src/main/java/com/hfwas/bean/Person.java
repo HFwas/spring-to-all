@@ -17,8 +17,6 @@ import java.util.Properties;
  * @Version: 1.0
  **/
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @ToString
 public class Person {
     private String lastnName;
@@ -33,4 +31,20 @@ public class Person {
     private Map<String,Object> maps;
 
     private Properties properties;
+
+    public Person() {
+        System.out.println("person bean创建了");
+    }
+
+    public Person(String lastnName, Integer age, String gender, String email, Car car, List<Book> books, Map<String, Object> maps, Properties properties) {
+        this.lastnName = lastnName;
+        this.age = age;
+        this.gender = gender;
+        this.email = email;
+        this.car = car;
+        this.books = books;
+        this.maps = maps;
+        this.properties = properties;
+        System.out.println("person bean创建");
+    }
 }

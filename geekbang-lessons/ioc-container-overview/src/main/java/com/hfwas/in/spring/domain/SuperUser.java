@@ -1,6 +1,6 @@
-package com.hfwas.in.spring.ioc.overview.domain;
+package com.hfwas.in.spring.domain;
 
-import com.hfwas.in.spring.ioc.overview.annotation.Super;
+import com.hfwas.in.spring.annotation.Super;
 
 /**
  * @ClassName SuperUser

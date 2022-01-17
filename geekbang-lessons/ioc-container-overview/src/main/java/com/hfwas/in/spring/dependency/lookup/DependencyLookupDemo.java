@@ -1,12 +1,10 @@
-package com.hfwas.in.spring.ioc.overview.dependency.lookup;
+package com.hfwas.in.spring.dependency.lookup;
 
-import com.hfwas.in.spring.ioc.overview.annotation.Super;
-import com.hfwas.in.spring.ioc.overview.domain.User;
+import com.hfwas.in.spring.annotation.Super;
+import com.hfwas.in.spring.domain.User;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
-import org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Map;

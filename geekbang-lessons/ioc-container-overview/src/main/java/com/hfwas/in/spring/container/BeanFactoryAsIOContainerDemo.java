@@ -1,6 +1,6 @@
-package com.hfwas.in.spring.ioc.overview.container;
+package com.hfwas.in.spring.container;
 
-import com.hfwas.in.spring.ioc.overview.domain.User;
+import com.hfwas.in.spring.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;

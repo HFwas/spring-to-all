@@ -1,6 +1,6 @@
-package com.hfwas.in.spring.ioc.overview.repository;
+package com.hfwas.in.spring.repository;
 
-import com.hfwas.in.spring.ioc.overview.domain.User;
+import com.hfwas.in.spring.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;

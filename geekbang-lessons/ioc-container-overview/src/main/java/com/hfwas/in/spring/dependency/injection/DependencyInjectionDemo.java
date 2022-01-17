@@ -1,17 +1,12 @@
-package com.hfwas.in.spring.ioc.overview.dependency.injection;
+package com.hfwas.in.spring.dependency.injection;
 
-import com.hfwas.in.spring.ioc.overview.annotation.Super;
-import com.hfwas.in.spring.ioc.overview.domain.User;
-import com.hfwas.in.spring.ioc.overview.repository.UserRepository;
+import com.hfwas.in.spring.domain.User;
+import com.hfwas.in.spring.repository.UserRepository;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.env.Environment;
-
-import java.util.Map;
 
 /**
  * @ClassName DependencyLookupDemo

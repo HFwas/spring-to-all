@@ -1,11 +1,8 @@
-package com.hfwas.in.spring.ioc.overview.container;
+package com.hfwas.in.spring.container;
 
-import com.hfwas.in.spring.ioc.overview.domain.User;
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+import com.hfwas.in.spring.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

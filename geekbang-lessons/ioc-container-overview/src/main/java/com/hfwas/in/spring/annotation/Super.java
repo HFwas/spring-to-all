@@ -1,4 +1,4 @@
-package com.hfwas.in.spring.ioc.overview.annotation;
+package com.hfwas.in.spring.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

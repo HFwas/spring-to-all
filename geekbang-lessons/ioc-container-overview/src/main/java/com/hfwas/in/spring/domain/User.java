@@ -1,4 +1,4 @@
-package com.hfwas.in.spring.ioc.overview.domain;
+package com.hfwas.in.spring.domain;
 
 /**
  * @ClassName User

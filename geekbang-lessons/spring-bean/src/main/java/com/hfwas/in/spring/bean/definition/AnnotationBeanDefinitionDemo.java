@@ -2,13 +2,17 @@ package com.hfwas.in.spring.bean.definition;
 
 import com.hfwas.in.spring.domain.User;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
+import org.springframework.beans.factory.support.BeanDefinitionReaderUtils;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import java.util.Map;
+
+import static org.springframework.beans.factory.support.BeanDefinitionBuilder.genericBeanDefinition;
 
 /**
  * @ClassName AnnotationBeanDefinitionDemo
@@ -29,6 +33,13 @@ public class AnnotationBeanDefinitionDemo {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         // 注册 Configuration class (配置类)
         applicationContext.register(Config.class);
+
+        // 通过 BeanDefinition 注册 API 实现
+        // 1。命名 bean 的注册方式
+        registerUserBeanDefinition(applicationContext, "mercyblitz-user");
+        // 2. 非命名的 bean 的注册方法
+        registerUserBeanDefinition(applicationContext);
+
         // 启动应用上下文
         applicationContext.refresh();
         // 按照类型查找
@@ -39,16 +50,32 @@ public class AnnotationBeanDefinitionDemo {
         applicationContext.close();
     }
 
-    public static void registerDefinition(BeanDefinitionRegistry beanDefinitionRegistry, String beanName, Class<?> beanClass) {
-        BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(beanClass);
+    /**
+     * 命名 bean 的注册方式
+     *
+     * @param beanDefinitionRegistry
+     * @param beanName
+     */
+    public static void registerUserBeanDefinition(BeanDefinitionRegistry beanDefinitionRegistry, String beanName) {
+        BeanDefinitionBuilder beanDefinitionBuilder = genericBeanDefinition(User.class);
         beanDefinitionBuilder
                 .addPropertyValue("id", 89L)
                 .addPropertyValue("name", "hfwas");
 
-        // 注册 BeanDefinition
-        beanDefinitionRegistry.registerBeanDefinition(beanName, beanDefinitionBuilder.getBeanDefinition());
-
+        // 判断如果 beanName 参数存在时
+        if (StringUtils.hasText(beanName)) {
+            // 注册 BeanDefinition
+            beanDefinitionRegistry.registerBeanDefinition(beanName, beanDefinitionBuilder.getBeanDefinition());
+        } else {
+            // 非命名的 bean 注册方法
+            BeanDefinitionReaderUtils.registerWithGeneratedName(beanDefinitionBuilder.getBeanDefinition(), beanDefinitionRegistry);
+        }
     }
+
+    public static void registerUserBeanDefinition(BeanDefinitionRegistry beanDefinitionRegistry) {
+        registerUserBeanDefinition(beanDefinitionRegistry, null);
+    }
+
 
     // 2. 通过 @Component 方式
     @Component // 定义当前类作为 Spring bean （组件）

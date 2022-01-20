@@ -1,5 +1,7 @@
 package com.hfwas.in.spring.bean.factory;
 
+import org.springframework.beans.factory.InitializingBean;
+
 import javax.annotation.PostConstruct;
 
 /**
@@ -12,7 +14,7 @@ import javax.annotation.PostConstruct;
  * @Date: 9:43 下午
  * @Version: 1.0
  **/
-public class DefaultUserFactory implements UserFactory{
+public class DefaultUserFactory implements UserFactory, InitializingBean {
 
     // 基于 @PostConstruct 注解
     @PostConstruct
@@ -20,4 +22,12 @@ public class DefaultUserFactory implements UserFactory{
         System.out.println("@PostConstruct UserFactory 初始化中。。。 ");
     }
 
+    public void initUserFactory(){
+        System.out.println("自定义初始化方法 initUserFactory（）： UserFactory初始化中。。。。" );
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("自定义初始化方法 InitializingBean#afterPropertiesSet 初始化中。。。。" );
+    }
 }

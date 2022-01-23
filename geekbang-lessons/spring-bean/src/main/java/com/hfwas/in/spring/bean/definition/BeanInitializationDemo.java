@@ -5,6 +5,7 @@ import com.hfwas.in.spring.bean.factory.UserFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 /**
  * @ClassName BeanInitializationDemo
@@ -26,13 +27,17 @@ public class BeanInitializationDemo {
         applicationContext.register(BeanInitializationDemo.class);
         // 启动 Spring 应用上下文
         applicationContext.refresh();
+        System.out.println("非延迟初始化在 sprign 应用上下文启动完成后，被初始化s");
         // 依赖查找 UserFactory
         UserFactory bean = applicationContext.getBean(UserFactory.class);
+        // com.hfwas.in.spring.bean.factory.DefaultUserFactory@c8e4bb0
+        System.out.println(bean);
         // 关闭 Spring 应用上下文
         applicationContext.close();
     }
 
     @Bean(initMethod = "initUserFactory")
+    @Lazy
     public UserFactory userFactory(){
         return new DefaultUserFactory();
     }

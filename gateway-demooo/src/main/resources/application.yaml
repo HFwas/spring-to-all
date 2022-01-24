@@ -1,0 +1,43 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: gateway-demooo
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  cloud:
+    gateway:
+      routes:
+        - id: demo-microservice
+#          uri: http://localhost:8082
+          uri: http://jcgl-microservice:8082
+          predicates:
+            - Path=/demo-dashboard/**
+          filters:
+            - StripPrefix=1
+        - id: demo-support
+          uri: http://localhost:8081
+          predicates:
+            - Path=/demo-support/**
+          filters:
+            - StripPrefix=1
+        - id: demo-watf
+          uri: http://watf-dypri.hsyb-dyweb:9991
+          predicates:
+            - Path=/demo-watf/**
+          filters:
+            - StripPrefix=1
+        - id: demo-hydro
+          uri: http://hydro-data-src.hsyb-sqrh:8080
+          predicates:
+            - Path=/demo-hydro/**
+          filters:
+            - StripPrefix=1
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedHeaders: "*"
+            allowedOrigins: "*"
+            allowedMethods: "*"

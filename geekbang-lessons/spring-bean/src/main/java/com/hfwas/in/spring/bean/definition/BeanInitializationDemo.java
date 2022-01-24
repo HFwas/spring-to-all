@@ -32,12 +32,14 @@ public class BeanInitializationDemo {
         UserFactory bean = applicationContext.getBean(UserFactory.class);
         // com.hfwas.in.spring.bean.factory.DefaultUserFactory@c8e4bb0
         System.out.println(bean);
+        System.out.println("spring 上下文   准备 关闭");
         // 关闭 Spring 应用上下文
         applicationContext.close();
+        System.out.println("spring 上下文已关闭");
     }
 
-    @Bean(initMethod = "initUserFactory")
-    @Lazy
+    @Bean(initMethod = "initUserFactory", destroyMethod = "doDestory")
+    @Lazy(value = false)
     public UserFactory userFactory(){
         return new DefaultUserFactory();
     }

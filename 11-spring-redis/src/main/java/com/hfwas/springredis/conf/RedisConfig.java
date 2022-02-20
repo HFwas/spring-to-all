@@ -18,7 +18,6 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import java.time.Duration;
-import java.time.temporal.Temporal;
 
 /**
  * @ClassName RedisConfig

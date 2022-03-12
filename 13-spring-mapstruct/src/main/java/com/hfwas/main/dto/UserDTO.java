@@ -1,4 +1,4 @@
-package com.hfwas.springmvcsrcdemo.dto;
+package com.hfwas.main.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,8 +1,8 @@
-package com.hfwas.springmvcsrcdemo.mapstruct;
+package com.hfwas.main.mapstruct;
 
-import com.hfwas.springmvcsrcdemo.bean.User;
-import com.hfwas.springmvcsrcdemo.dto.UserDTO;
-import com.hfwas.springmvcsrcdemo.vo.UserVO;
+import com.hfwas.main.bean.User;
+import com.hfwas.main.dto.UserDTO;
+import com.hfwas.main.vo.UserVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -23,7 +23,7 @@ public interface UserConvert {
      * @param user
      * @return
      */
-    @Mapping(source = "id", target = "userId")
+//    @Mapping(source = "id", target = "userId")
     UserVO convertUser(User user);
 
     UserDTO convertUserDTO(User user);

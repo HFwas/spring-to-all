@@ -2,6 +2,8 @@ package com.hfwas.springmvcsrcdemo.structure.bean;
 
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 /**
  * @ClassName User
  * @Description
@@ -13,4 +15,9 @@ import lombok.Data;
 public class User {
     private String name;
     private Integer age;
+
+    private LocalDateTime updateTime;
+    private String address;
+
+    private Long id;
 }
